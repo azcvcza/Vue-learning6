@@ -13,7 +13,7 @@
 				value:"",
 			}
 		},
-		inject:{color:"colors",editingEventBus:"editingEventBus"},
+		inject:{colors:"colors",editingEventBus:"editingEventBus"},
 		watch:{
 			value(newVal){
 				this.editingEventBus.$emit("change",{name:this.editorFor,value:this.value})

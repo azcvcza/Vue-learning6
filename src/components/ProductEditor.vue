@@ -31,18 +31,22 @@ export default {
 	methods:{
 		startEdit(product){
 			this.editing = true;
+			console.group("in startEdit:",product.id,product.name,product.price);
 			this.product ={
 				id:product.id,
 				name:product.name,
 				price:product.price
 			}
+			this.editing = false;
+			console.groupEnd("edit end")
+			return ;
 		},
 		startCreate(){
 			this.editing = false;
 			this.product={
-				id:0,
-				name:"",
-				price:0
+				id:"auto create",
+				name:"auto",
+				price:1
 			}
 		},
 		save(){
